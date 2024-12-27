@@ -49,11 +49,12 @@ class ContactView(TemplateView):
         if form.is_valid():
             subject = "Пробное сообщение"
             body = {
-                'first_name': form.cleaned_data['first_name'],
-                'last_name': form.cleaned_data['last_name'],
+                'name': form.cleaned_data['name'],
                 'email': form.cleaned_data['email_address'],
                 'phone': form.cleaned_data['phone'],
-                'experience': form.cleaned_data['experience'],
+                'job': form.cleaned_data['job'],
+                'about_me': form.cleaned_data['about_me'],
+                'about_me': form.cleaned_data['about_me'],
             }
             message = "\n".join(body.values())
 
